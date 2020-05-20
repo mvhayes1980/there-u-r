@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Zomato from './components/zomato/zomatoResults';
 import Navbar from './components/Navbar';
 import NASAFetch from './components/nasa-fetch/NASAFetch';
 
@@ -21,6 +22,7 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <Navbar/>
+        <Zomato lat={this.state.lat} lon={this.state.lon}/>
         <div style={{width: "400px"}}>
         <NASAFetch lat={this.state.lat} lon={this.state.lon}/>
         </div>
