@@ -31,7 +31,7 @@ export default function Navbar() {
           <img id="navLogo" src={NavLogo} alt="logo" height='100px'/>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            -INFO BASED ON YOUR LOCATION-
+            WHEREVER YOU GO...
           </Typography>
         </Toolbar>
       </AppBar>
