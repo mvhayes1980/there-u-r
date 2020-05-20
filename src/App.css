@@ -1,38 +1,67 @@
-.App {
+body {
+  background-blend-mode: multiply;
+  background-image: linear-gradient(#000000, #ffffff), url("./assets/earthImage.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.MuiAppBar {
+  background-color: #4a525a !important;
+}
+
+.Cards{
+  display: inline-flex;
+}
+.card {
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px !important;
+  text-align: center !important;
+  box-shadow: 2px 2px rgb(0, 0, 0);
+}
+div.card-body {
+  border: 1px solid !important;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+p.card-text {
+  margin: 0px !important;
+}
+
+.Cards :hover{
+  background-color: #f3E8EE;
+}
+
+.card-title {
+  font-weight: 800;
+}
+
+.card-subtitle {
+  font-style: italic;
+}
+
+.btn.btn-secondary {
+  color: #282c34;
+}
+
+
+h2 {
   text-align: center;
+  color: #f3E8EE;
+  font-weight: 800;
+  font-size: 45px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.weatherCard {
+  margin-left: 616px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nasaCard {
+  margin-left: 600px !important;
+  width: 300px;
 }
