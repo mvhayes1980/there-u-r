@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    textAlign: "left",
     fontWeight: 800,
     color: "white",
   },
@@ -30,7 +31,7 @@ export default function Navbar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
           <img id="navLogo" src={NavLogo} alt="logo" height='100px'/>
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h5" className={classes.title}>
             WHEREVER YOU GO...
           </Typography>
         </Toolbar>
