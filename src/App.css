@@ -9,15 +9,6 @@ body {
   background-color: #4a525a !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .Cards{
   display: inline-flex ;
 }
@@ -53,4 +44,3 @@ p.card-text {
 .btn.btn-secondary {
   color: #282c34;
 }
-

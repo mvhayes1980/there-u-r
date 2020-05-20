@@ -17,7 +17,6 @@ export default class App extends React.Component {
       navigator.geolocation.getCurrentPosition((position)=>{
         console.log("look here");
         this.setState({lat: position.coords.latitude, lon: position.coords.longitude});
-        this.forceUpdate();
       })
   }
   render(){
@@ -25,10 +24,10 @@ export default class App extends React.Component {
       <div className="App">
         <Navbar/>
         <OpenWeather lat={this.state.lat} lon={this.state.lon}/>
-        <div style={{width: "400px"}}>
+        <div style={{width: "300px"}} color="white">
         <NASAFetch lat={this.state.lat} lon={this.state.lon}/>
-        <Zomato lat={this.state.lat} lon={this.state.lon}/>
         </div>
+        <Zomato lat={this.state.lat} lon={this.state.lon}/>
       </div>
     );
   }
