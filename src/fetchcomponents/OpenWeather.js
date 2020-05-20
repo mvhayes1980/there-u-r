@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+    Card, CardBody,
+    CardTitle
+  } from 'reactstrap';
+  import Button from '@material-ui/core/Button';
 const apikey = "a3c685a1935c2afcad5f1c36ad13b5f7";
 
 
@@ -37,10 +42,17 @@ export default class OpenWeather extends React.Component {
 
 render() {
     return(
-        <div>
-            <h3>Current Temperature {this.getTemp()}</h3>
+    <div>
+        <h2>Your Current Weather:</h2>
+        <div className="Cards">
+            <Card className="weatherCard">
+            <CardBody>
             <img src={`http://openweathermap.org/img/wn/${this.state.img}@2x.png`}/>
-            <button onClick={() => {this.setState({isCelsius: !this.state.isCelsius})}}>Convert Temp</button>
+            <CardTitle><h3>Current Temperature {this.getTemp()}</h3></CardTitle>
+            </CardBody>
+            </Card>
         </div>
+            <Button variant="contained" color="primary" size="large" onClick={() => {this.setState({isCelsius: !this.state.isCelsius})}}>Convert Temp</Button>
+    </div>
     )
 }}
