@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import OpenWeather from './fetchcomponents/OpenWeather';
 import Zomato from './components/zomato/zomatoResults';
 import Navbar from './components/Navbar';
 import NASAFetch from './components/nasa-fetch/NASAFetch';
-
 
 export default class App extends React.Component {
   constructor(props) {
@@ -23,6 +23,7 @@ export default class App extends React.Component {
       <div className="App">
         <Navbar/>
         <Zomato lat={this.state.lat} lon={this.state.lon}/>
+        <OpenWeather lat={this.state.lat} lon={this.state.lon}/>
         <div style={{width: "400px"}}>
         <NASAFetch lat={this.state.lat} lon={this.state.lon}/>
         </div>
@@ -30,3 +31,4 @@ export default class App extends React.Component {
     );
   }
 }
+
