@@ -43,7 +43,7 @@ export default class OpenWeather extends React.Component {
 render() {
     return(
     <div>
-        <h2>Your Current Weather:</h2>
+        <h2>Current Weather:</h2>
         <div className="Cards">
             <Card className="weatherCard">
             <CardBody>
@@ -52,7 +52,9 @@ render() {
             </CardBody>
             </Card>
         </div>
+        <div>
             <Button variant="contained" color="primary" size="large" onClick={() => {this.setState({isCelsius: !this.state.isCelsius})}}>Convert Temp</Button>
+        </div>
     </div>
     )
 }}
