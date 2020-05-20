@@ -6,7 +6,8 @@ export default class OpenWeather extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            img: ''
+            img: '',
+            isCelsius: false
         }
     }
     
@@ -17,18 +18,29 @@ export default class OpenWeather extends React.Component {
                 console.log(json)
                 this.setState({
                     img: json.weather[0].icon,
-                    temp: json.main.temp
+                    temp: Math.round(((json.main.temp - 273.15) * (9/5)) + 32)
+
                 })
                 console.log(this.state.img)
         })
         }
 
-    
+        getTemp(){
+            let temp;
+            if (this.state.isCelsius) {
+                temp = (this.state.temp - 32) * (5/9);
+                temp = Math.round(temp);
+                temp +="°C"
+            } else {temp=this.state.temp + "°F"}
+            return temp
+        }
+
 render() {
     return(
         <div>
-            <h3>Current Temperature {this.state.temp}</h3>
+            <h3>Current Temperature {this.getTemp()}</h3>
             <img src={`http://openweathermap.org/img/wn/${this.state.img}@2x.png`}/>
+            <button onClick={() => {this.setState({isCelsius: !this.state.isCelsius})}}>Convert Temp</button>
         </div>
     )
 }}
