@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import Zomato from './components/zomato/zomatoResults';
 
 function App() {
+  
   return (
     <div className="App">
-      You are HERE
-      DEVELOP BRANCH
+      <Zomato lat={39} lon={86}/>
     </div>
   );
 }
