@@ -38,16 +38,16 @@ export default class Zomato extends Component {
         return(
             this.state.results.map(restaurant=>{
                 return(
-                    <CardGroup>
-                        <Card>
+                    <div className="Cards">
+                        <Card className="card">
                             <CardBody>
-                            <CardTitle>{restaurant.restaurant.name}</CardTitle>
-                            <CardSubtitle>{restaurant.restaurant.location.address}</CardSubtitle>
-                            <CardText>{restaurant.restaurant.user_rating.aggregate_rating}</CardText>
-                            <Button href={restaurant.restaurant.url}>Restaurant Website</Button>
+                                <CardTitle>{restaurant.restaurant.name}</CardTitle>
+                                <CardSubtitle>{restaurant.restaurant.location.address}</CardSubtitle>
+                                <CardText>Rating: {restaurant.restaurant.user_rating.aggregate_rating}</CardText>
+                                <Button href={restaurant.restaurant.url}>Restaurant Website</Button>
                             </CardBody>
                         </Card>
-                    </CardGroup>
+                    </div>
                 )
             })
         )
@@ -58,8 +58,10 @@ export default class Zomato extends Component {
         
         return(
             <div>
-                <h1>Restaurants Near You:</h1>
-                {this.state.results.length>0 ? this.resultsMap() : null}
+                <h2>Restaurants Near You:</h2>
+                <div className="allCards">
+                    {this.state.results.length>0 ? this.resultsMap() : null}
+                </div>
             </div>
         )
     }

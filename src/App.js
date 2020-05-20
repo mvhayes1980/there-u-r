@@ -6,7 +6,7 @@ function App() {
   
   return (
     <div className="App">
-      <Zomato lat={39} lon={86}/>
+      <Zomato lat={39.710812} lon={-86.359291}/>
     </div>
   );
 }

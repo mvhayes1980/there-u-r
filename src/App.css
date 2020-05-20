@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.Cards{
+  display: inline-flex ;
+}
+.card {
+  margin: 10px !important;
+  /* display: inline-block; */
+  text-align: center !important;
+  box-shadow: 2px 2px #4A525A;
+}
+div.card-body {
+  border: 1px solid !important;
+  padding: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+p.card-text {
+  margin: 0px !important;
+}
+
+.Cards :hover{
+  background-color: #f3E8EE;
+}
+
+.card-title {
+  font-weight: 800;
+}
+
+.card-subtitle {
+  font-style: italic;
+}
+
+.btn.btn-secondary {
+  color: #282c34;
+}
