@@ -22,7 +22,7 @@ export default class NASAFetch extends React.Component {
             <div className="Cards">
                 <Card className="nasaCard">
                 <CardBody>
-                <CardTitle><h3>Latitude: {this.props.lat}, Longitude: {this.props.lon}</h3></CardTitle>
+                <CardTitle><h3>Latitude: {this.props.lat} Longitude: {this.props.lon}</h3></CardTitle>
                 <img width={"100%"} src={`https://api.nasa.gov/planetary/earth/imagery?lat=${this.props.lat}&lon=${this.props.lon}&api_key=${apikey}`} alt=""/>
                 </CardBody>
                 </Card>

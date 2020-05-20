@@ -29,8 +29,11 @@ export default class App extends React.Component {
       <div className="App">
         <Navbar/>
         <OpenWeather lat={this.state.lat} lon={this.state.lon}/>
+        <hr/>
         <NASAFetch lat={this.state.lat} lon={this.state.lon}/>
+        <hr/>
         <Zomato lat={this.state.lat} lon={this.state.lon}/>
+        <hr/>
       </div>
       : null
     );
