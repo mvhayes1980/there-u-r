@@ -16,7 +16,8 @@ export default class OpenWeather extends React.Component {
             .then(json => {
                 console.log(json)
                 this.setState({
-                    img: json.weather[0].icon
+                    img: json.weather[0].icon,
+                    temp: json.main.temp
                 })
                 console.log(this.state.img)
         })
@@ -26,7 +27,8 @@ export default class OpenWeather extends React.Component {
 render() {
     return(
         <div>
-              <img src={`http://openweathermap.org/img/wn/${this.state.img}@2x.png`}/>
+            <h3>Current Temperature {this.state.temp}</h3>
+            <img src={`http://openweathermap.org/img/wn/${this.state.img}@2x.png`}/>
         </div>
     )
 }}
