@@ -5,6 +5,11 @@ body {
   background-attachment: fixed;
 }
 
+
+.App {
+  text-align: center;
+}
+
 .MuiAppBar {
   background-color: #4a525a !important;
 }
@@ -13,9 +18,9 @@ body {
   display: inline-flex;
 }
 .card {
-  background-color: white;
+  background-color: rgb(165, 165, 165);
   border-radius: 10px;
-  margin: 10px !important;
+  margin: 12px !important;
   text-align: center !important;
   box-shadow: 2px 2px rgb(0, 0, 0);
 }
@@ -56,12 +61,11 @@ h2 {
 }
 
 
-.weatherCard {
-  margin-left: 616px !important;
-}
+/* .weatherCard {
+  margin-left: 600px !important;
+} */
 
 
 .nasaCard {
-  margin-left: 600px !important;
   width: 300px;
 }

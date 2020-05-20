@@ -45,7 +45,7 @@ export default class Zomato extends Component {
                                 <CardTitle>{restaurant.restaurant.name}</CardTitle>
                                 <CardSubtitle>{restaurant.restaurant.location.address}</CardSubtitle>
                                 <CardText>Rating: {restaurant.restaurant.user_rating.aggregate_rating}</CardText>
-                                <Button href={restaurant.restaurant.url}>Restaurant Website</Button>
+                                <Button href={restaurant.restaurant.url} target="blank">Restaurant Website</Button>
                             </CardBody>
                         </Card>
                     </div>
