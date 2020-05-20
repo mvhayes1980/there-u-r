@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
+import Navbar from './components/Navbar';
 import NASAFetch from './components/nasa-fetch/NASAFetch';
 
 
@@ -20,6 +20,7 @@ export default class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <Navbar/>
         <div style={{width: "400px"}}>
         <NASAFetch lat={this.state.lat} lon={this.state.lon}/>
         </div>
