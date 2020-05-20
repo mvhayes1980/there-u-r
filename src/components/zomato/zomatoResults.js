@@ -14,6 +14,7 @@ export default class Zomato extends Component {
     }
 
     componentDidMount(){
+        console.log("Coords", this.props.lat, this.props.lon);
         fetch(`https://developers.zomato.com/api/v2.1/geocode?lat=${this.props.lat}&lon=${this.props.lon}`,
         {
             method: 'GET',

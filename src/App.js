@@ -13,22 +13,23 @@ export default class App extends React.Component {
         lon: 0
       }
   }
-  componentDidMount() {
+  componentWillMount() {
       navigator.geolocation.getCurrentPosition((position)=>{
+        console.log("look here");
         this.setState({lat: position.coords.latitude, lon: position.coords.longitude});
+        this.forceUpdate();
       })
   }
   render(){
     return (
       <div className="App">
         <Navbar/>
-        <Zomato lat={this.state.lat} lon={this.state.lon}/>
         <OpenWeather lat={this.state.lat} lon={this.state.lon}/>
         <div style={{width: "400px"}}>
         <NASAFetch lat={this.state.lat} lon={this.state.lon}/>
+        <Zomato lat={this.state.lat} lon={this.state.lon}/>
         </div>
       </div>
     );
   }
 }
-
