@@ -9,26 +9,19 @@ body {
   background-color: #4a525a !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .Cards{
-  display: inline-flex ;
+  display: inline-flex;
 }
 .card {
+  background-color: white;
+  border-radius: 10px;
   margin: 10px !important;
-  /* display: inline-block; */
   text-align: center !important;
-  box-shadow: 2px 2px #4A525A;
+  box-shadow: 2px 2px rgb(0, 0, 0);
 }
 div.card-body {
   border: 1px solid !important;
+  border-radius: 10px;
   padding: 5px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
@@ -54,3 +47,21 @@ p.card-text {
   color: #282c34;
 }
 
+
+h2 {
+  text-align: center;
+  color: #f3E8EE;
+  font-weight: 800;
+  font-size: 45px;
+}
+
+
+.weatherCard {
+  margin-left: 616px !important;
+}
+
+
+.nasaCard {
+  margin-left: 600px !important;
+  width: 300px;
+}
